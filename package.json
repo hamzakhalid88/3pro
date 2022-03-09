@@ -1,0 +1,13 @@
+{
+    "name": "3pro",
+    "homepage": "http://hamzakhalid88/github.io/3pro",
+    "dependencies": {
+        "gh-pages": "^3.2.3"
+    },
+    "scripts" : {
+           "predeploy": "npm run build",
+           "deploy": "gh-pages -d build",
+            "start": "react-scripts start",
+            "build": "react-scripts build"
+    }
+}
