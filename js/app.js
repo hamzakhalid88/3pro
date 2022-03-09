@@ -15,7 +15,7 @@ addBtn.addEventListener("click", function(e) {
   notesObj.push(addTxt.value);
   localStorage.setItem("notes", JSON.stringify(notesObj));
   addTxt.value = "";
-//   console.log(notesObj);
+
   showNotes();
 });
 
@@ -48,7 +48,6 @@ function showNotes() {
 
 // Function to delete a note
 function deleteNote(index) {
-//   console.log("I am deleting", index);
 
   let notes = localStorage.getItem("notes");
   if (notes == null) {
@@ -67,7 +66,6 @@ let search = document.getElementById('searchTxt');
 search.addEventListener("input", function(){
 
     let inputVal = search.value.toLowerCase();
-    // console.log('Input event fired!', inputVal);
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function(element){
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
@@ -77,14 +75,7 @@ search.addEventListener("input", function(){
         else{
             element.style.display = "none";
         }
-        // console.log(cardTxt);
+        
     })
 })
 
-/*
-Further Features:
-1. Add Title
-2. Mark a note as Important
-3. Separate notes by user
-4. Sync and host to web server 
-*/ 
